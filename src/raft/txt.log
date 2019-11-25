@@ -1,0 +1,17 @@
+=== RUN   TestBasicAgree2B
+2019/11/21 23:39:28 Make raft instance: 0
+2019/11/21 23:39:28 Server: 0, Initialize raft state, state: 0; currentTerm: 0; voteFor: -1
+2019/11/21 23:39:28 Make raft instance: 1
+2019/11/21 23:39:28 Server: 1, Initialize raft state, state: 0; currentTerm: 0; voteFor: -1
+2019/11/21 23:39:28 Make raft instance: 2
+2019/11/21 23:39:28 Server: 2, Initialize raft state, state: 0; currentTerm: 0; voteFor: -1
+2019/11/21 23:39:28 Make raft instance: 3
+2019/11/21 23:39:28 Server: 3, Initialize raft state, state: 0; currentTerm: 0; voteFor: -1
+2019/11/21 23:39:28 Make raft instance: 4
+2019/11/21 23:39:28 Server: 4, Initialize raft state, state: 0; currentTerm: 0; voteFor: -1
+Test (2B): basic agreement ...
+--- FAIL: TestBasicAgree2B (0.00s)
+    config.go:384: cfg.logs index out of bound!
+FAIL
+exit status 1
+FAIL	github.com/mhearttzw/mit/src/raft	0.007s

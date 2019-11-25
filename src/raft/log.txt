@@ -1,0 +1,2010 @@
+=== RUN   TestReElection2A
+make_config function start!
+2019/11/16 12:54:40 Make raft instance: 0
+2019/11/16 12:54:40 Server: 0, Initialize raft state, state: 0; currentTerm: 0; voteFor: -1
+2019/11/16 12:54:40 Make raft instance: 1
+2019/11/16 12:54:40 Server: 1, Initialize raft state, state: 0; currentTerm: 0; voteFor: -1
+2019/11/16 12:54:40 Make raft instance: 2
+2019/11/16 12:54:40 Server: 2, Initialize raft state, state: 0; currentTerm: 0; voteFor: -1
+Test (2A): election after network failure ...
+2019/11/16 12:54:41 server:2, time after finished.
+2019/11/16 12:54:41 Term: 1; server 2 become candidate
+2019/11/16 12:54:41 Term: 1, server 2 startElection function finished.
+2019/11/16 12:54:41 Term: 1, server 2 send request vote to server 1 args: &{1 2 0 0}
+2019/11/16 12:54:41 Term: 1, server 2 send request vote to server 0 args: &{1 2 0 0}
+2019/11/16 12:54:41 Term: 0, server 0 receive server 2 requestVote rpc.
+2019/11/16 12:54:41 Term: 1; server 0 become follower
+2019/11/16 12:54:41 bababab
+2019/11/16 12:54:41 Term: 0, server 1 receive server 2 requestVote rpc.
+2019/11/16 12:54:41 Term: 1; server 1 become follower
+2019/11/16 12:54:41 bababab
+2019/11/16 12:54:41 come into voteCh
+2019/11/16 12:54:41 come into voteCh
+2019/11/16 12:54:41 Term: 1, server 2 receive request vote from server 0 reply: &{0 true}
+2019/11/16 12:54:41 okokokokok: true
+2019/11/16 12:54:41 okokokokok=============
+2019/11/16 12:54:41 okokokokok11111111111
+2019/11/16 12:54:41 Term: 1, server 2 receive request vote from server 1 reply: &{0 true}
+2019/11/16 12:54:41 okokokokok: true
+2019/11/16 12:54:41 Term: 1, ------------server 2 receive vote from server 0.
+2019/11/16 12:54:41 Term: 1,------>>>>>>> server 2 total votes: 2
+2019/11/16 12:54:41 to beeeeee leader+++++++++++++++++++
+2019/11/16 12:54:41 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~come into beleader!
+2019/11/16 12:54:41 Term: 1; server 2 become leader!!!!!!!!!!!!!!!!!!!!!!!!!
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 come into voteCh
+2019/11/16 12:54:41 okokokokok=============
+2019/11/16 12:54:41 Term: 1, server 2 state 2
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 0 receive appendEntries rpc.
+2019/11/16 12:54:41 Term: 1; server 0 become follower
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 true}
+2019/11/16 12:54:41 Term: 1, server 1 receive appendEntries rpc.
+2019/11/16 12:54:41 Term: 1; server 1 become follower
+labgob warning: Decoding into a non-default variable/field Success may not work
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 true}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 0 receive appendEntries rpc.
+2019/11/16 12:54:41 Term: 1, server 1 receive appendEntries rpc.
+2019/11/16 12:54:41 Term: 1; server 1 become follower
+2019/11/16 12:54:41 Term: 1; server 0 become follower
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 true}
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 true}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 1 receive appendEntries rpc.
+2019/11/16 12:54:41 Term: 1; server 1 become follower
+2019/11/16 12:54:41 Term: 1, server 0 receive appendEntries rpc.
+2019/11/16 12:54:41 Term: 1; server 0 become follower
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 true}
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 true}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 1 receive appendEntries rpc.
+2019/11/16 12:54:41 Term: 1; server 1 become follower
+2019/11/16 12:54:41 Term: 1, server 0 receive appendEntries rpc.
+2019/11/16 12:54:41 Term: 1; server 0 become follower
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 true}
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 true}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 0 receive appendEntries rpc.
+2019/11/16 12:54:41 Term: 1; server 0 become follower
+2019/11/16 12:54:41 Term: 1, server 1 receive appendEntries rpc.
+2019/11/16 12:54:41 Term: 1; server 1 become follower
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 true}
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 true}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 0 receive appendEntries rpc.
+2019/11/16 12:54:41 Term: 1; server 0 become follower
+2019/11/16 12:54:41 Term: 1, server 1 receive appendEntries rpc.
+2019/11/16 12:54:41 Term: 1; server 1 become follower
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 true}
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 true}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 server:0, time after finished.
+2019/11/16 12:54:41 Term: 2; server 0 become candidate
+2019/11/16 12:54:41 Term: 2, server 0 startElection function finished.
+2019/11/16 12:54:41 Term: 2, server 0 send request vote to server 2 args: &{2 0 0 0}
+2019/11/16 12:54:41 Term: 2, server 0 send request vote to server 1 args: &{2 0 0 0}
+2019/11/16 12:54:41 Term: 1, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:41 Term: 2, server 0 receive request vote from server 1 reply: &{1 false}
+2019/11/16 12:54:41 okokokokok: true
+2019/11/16 12:54:41 okokokokok=============
+2019/11/16 12:54:41 okokokokok11111111111
+2019/11/16 12:54:41 Term: 2,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 server:1, time after finished.
+2019/11/16 12:54:41 Term: 2; server 1 become candidate
+2019/11/16 12:54:41 Term: 2, server 1 startElection function finished.
+2019/11/16 12:54:41 Term: 2, server 1 send request vote to server 2 args: &{2 1 0 0}
+2019/11/16 12:54:41 Term: 2, server 1 send request vote to server 0 args: &{2 1 0 0}
+2019/11/16 12:54:41 Term: 2, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:41 Term: 2, server 1 receive request vote from server 0 reply: &{2 false}
+2019/11/16 12:54:41 okokokokok: true
+2019/11/16 12:54:41 okokokokok=============
+2019/11/16 12:54:41 okokokokok11111111111
+2019/11/16 12:54:41 Term: 2,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:41 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:41 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:41 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 server:0, time after finished.
+2019/11/16 12:54:42 Term: 3; server 0 become candidate
+2019/11/16 12:54:42 Term: 3, server 0 startElection function finished.
+2019/11/16 12:54:42 Term: 3, server 0 send request vote to server 1 args: &{3 0 0 0}
+2019/11/16 12:54:42 Term: 3, server 0 send request vote to server 2 args: &{3 0 0 0}
+2019/11/16 12:54:42 Term: 2, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:42 Term: 3, server 0 receive request vote from server 1 reply: &{2 false}
+2019/11/16 12:54:42 okokokokok: true
+2019/11/16 12:54:42 okokokokok=============
+2019/11/16 12:54:42 okokokokok11111111111
+2019/11/16 12:54:42 Term: 3,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 server:1, time after finished.
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 3; server 1 become candidate
+2019/11/16 12:54:42 Term: 3, server 1 startElection function finished.
+2019/11/16 12:54:42 Term: 3, server 1 send request vote to server 0 args: &{3 1 0 0}
+2019/11/16 12:54:42 Term: 3, server 1 send request vote to server 2 args: &{3 1 0 0}
+2019/11/16 12:54:42 Term: 3, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:42 Term: 3, server 1 receive request vote from server 0 reply: &{3 false}
+2019/11/16 12:54:42 okokokokok: true
+2019/11/16 12:54:42 okokokokok=============
+2019/11/16 12:54:42 okokokokok11111111111
+2019/11/16 12:54:42 Term: 3,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 server:1, time after finished.
+2019/11/16 12:54:42 Term: 4; server 1 become candidate
+2019/11/16 12:54:42 Term: 4, server 1 startElection function finished.
+2019/11/16 12:54:42 Term: 4, server 1 send request vote to server 2 args: &{4 1 0 0}
+2019/11/16 12:54:42 Term: 4, server 1 send request vote to server 0 args: &{4 1 0 0}
+2019/11/16 12:54:42 Term: 3, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:42 Term: 4, server 1 receive request vote from server 0 reply: &{3 false}
+2019/11/16 12:54:42 okokokokok: true
+2019/11/16 12:54:42 okokokokok=============
+2019/11/16 12:54:42 okokokokok11111111111
+2019/11/16 12:54:42 Term: 4,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 server:0, time after finished.
+2019/11/16 12:54:42 Term: 4; server 0 become candidate
+2019/11/16 12:54:42 Term: 4, server 0 startElection function finished.
+2019/11/16 12:54:42 Term: 4, server 0 send request vote to server 1 args: &{4 0 0 0}
+2019/11/16 12:54:42 Term: 4, server 0 send request vote to server 2 args: &{4 0 0 0}
+2019/11/16 12:54:42 Term: 4, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:42 Term: 4, server 0 receive request vote from server 1 reply: &{4 false}
+2019/11/16 12:54:42 okokokokok: true
+2019/11/16 12:54:42 okokokokok=============
+2019/11/16 12:54:42 okokokokok11111111111
+2019/11/16 12:54:42 Term: 4,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 server:1, time after finished.
+2019/11/16 12:54:42 Term: 5; server 1 become candidate
+2019/11/16 12:54:42 Term: 5, server 1 startElection function finished.
+2019/11/16 12:54:42 Term: 5, server 1 send request vote to server 2 args: &{5 1 0 0}
+2019/11/16 12:54:42 Term: 5, server 1 send request vote to server 0 args: &{5 1 0 0}
+2019/11/16 12:54:42 Term: 4, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:42 Term: 5, server 1 receive request vote from server 0 reply: &{4 false}
+2019/11/16 12:54:42 okokokokok: true
+2019/11/16 12:54:42 okokokokok=============
+2019/11/16 12:54:42 okokokokok11111111111
+2019/11/16 12:54:42 Term: 5,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 server:0, time after finished.
+2019/11/16 12:54:42 Term: 5; server 0 become candidate
+2019/11/16 12:54:42 Term: 5, server 0 startElection function finished.
+2019/11/16 12:54:42 Term: 5, server 0 send request vote to server 2 args: &{5 0 0 0}
+2019/11/16 12:54:42 Term: 5, server 0 send request vote to server 1 args: &{5 0 0 0}
+2019/11/16 12:54:42 Term: 5, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:42 Term: 5, server 0 receive request vote from server 1 reply: &{5 false}
+2019/11/16 12:54:42 okokokokok: true
+2019/11/16 12:54:42 okokokokok=============
+2019/11/16 12:54:42 okokokokok11111111111
+2019/11/16 12:54:42 Term: 5,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:42 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:42 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:42 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:42 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 5, server 1 receive request vote from server 2 reply: &{2 false}
+2019/11/16 12:54:43 okokokokok: false
+2019/11/16 12:54:43 server:0, time after finished.
+2019/11/16 12:54:43 Term: 6; server 0 become candidate
+2019/11/16 12:54:43 Term: 6, server 0 startElection function finished.
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 6, server 0 send request vote to server 2 args: &{6 0 0 0}
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 6, server 0 send request vote to server 1 args: &{6 0 0 0}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 5, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:43 Term: 6, server 0 receive request vote from server 1 reply: &{5 false}
+2019/11/16 12:54:43 okokokokok: true
+2019/11/16 12:54:43 okokokokok=============
+2019/11/16 12:54:43 okokokokok11111111111
+2019/11/16 12:54:43 Term: 6,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:43 server:1, time after finished.
+2019/11/16 12:54:43 Term: 6; server 1 become candidate
+2019/11/16 12:54:43 Term: 6, server 1 startElection function finished.
+2019/11/16 12:54:43 Term: 6, server 1 send request vote to server 2 args: &{6 1 0 0}
+2019/11/16 12:54:43 Term: 6, server 1 send request vote to server 0 args: &{6 1 0 0}
+2019/11/16 12:54:43 Term: 6, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:43 Term: 6, server 1 receive request vote from server 0 reply: &{6 false}
+2019/11/16 12:54:43 okokokokok: true
+2019/11/16 12:54:43 okokokokok=============
+2019/11/16 12:54:43 okokokokok11111111111
+2019/11/16 12:54:43 Term: 6,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 6, server 0 receive request vote from server 2 reply: &{2 false}
+2019/11/16 12:54:43 okokokokok: false
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:43 server:0, time after finished.
+2019/11/16 12:54:43 Term: 7; server 0 become candidate
+2019/11/16 12:54:43 Term: 7, server 0 startElection function finished.
+2019/11/16 12:54:43 Term: 7, server 0 send request vote to server 2 args: &{7 0 0 0}
+2019/11/16 12:54:43 Term: 7, server 0 send request vote to server 1 args: &{7 0 0 0}
+2019/11/16 12:54:43 Term: 6, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:43 Term: 7, server 0 receive request vote from server 1 reply: &{6 false}
+2019/11/16 12:54:43 okokokokok: true
+2019/11/16 12:54:43 okokokokok=============
+2019/11/16 12:54:43 okokokokok11111111111
+2019/11/16 12:54:43 Term: 7,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:43 Term: 6, server 1 receive request vote from server 2 reply: &{3 false}
+2019/11/16 12:54:43 okokokokok: false
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 server:1, time after finished.
+2019/11/16 12:54:43 Term: 7; server 1 become candidate
+2019/11/16 12:54:43 Term: 7, server 1 startElection function finished.
+2019/11/16 12:54:43 Term: 7, server 1 send request vote to server 2 args: &{7 1 0 0}
+2019/11/16 12:54:43 Term: 7, server 1 send request vote to server 0 args: &{7 1 0 0}
+2019/11/16 12:54:43 Term: 7, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:43 Term: 7, server 1 receive request vote from server 0 reply: &{7 false}
+2019/11/16 12:54:43 okokokokok: true
+2019/11/16 12:54:43 okokokokok=============
+2019/11/16 12:54:43 okokokokok11111111111
+2019/11/16 12:54:43 Term: 7,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 server:1, time after finished.
+2019/11/16 12:54:43 Term: 8; server 1 become candidate
+2019/11/16 12:54:43 Term: 8, server 1 startElection function finished.
+2019/11/16 12:54:43 Term: 8, server 1 send request vote to server 0 args: &{8 1 0 0}
+2019/11/16 12:54:43 Term: 8, server 1 send request vote to server 2 args: &{8 1 0 0}
+2019/11/16 12:54:43 Term: 7, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:43 Term: 8, server 1 receive request vote from server 0 reply: &{7 false}
+2019/11/16 12:54:43 okokokokok: true
+2019/11/16 12:54:43 okokokokok=============
+2019/11/16 12:54:43 okokokokok11111111111
+2019/11/16 12:54:43 Term: 8,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 server:0, time after finished.
+2019/11/16 12:54:43 Term: 8; server 0 become candidate
+2019/11/16 12:54:43 Term: 8, server 0 startElection function finished.
+2019/11/16 12:54:43 Term: 8, server 0 send request vote to server 2 args: &{8 0 0 0}
+2019/11/16 12:54:43 Term: 8, server 0 send request vote to server 1 args: &{8 0 0 0}
+2019/11/16 12:54:43 Term: 8, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:43 Term: 8, server 0 receive request vote from server 1 reply: &{8 false}
+2019/11/16 12:54:43 okokokokok: true
+2019/11/16 12:54:43 okokokokok=============
+2019/11/16 12:54:43 okokokokok11111111111
+2019/11/16 12:54:43 Term: 8,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:43 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:43 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 server:1, time after finished.
+2019/11/16 12:54:44 Term: 9; server 1 become candidate
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 9, server 1 send request vote to server 2 args: &{9 1 0 0}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 9, server 1 startElection function finished.
+2019/11/16 12:54:44 Term: 9, server 1 send request vote to server 0 args: &{9 1 0 0}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 8, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:44 Term: 9, server 1 receive request vote from server 0 reply: &{8 false}
+2019/11/16 12:54:44 okokokokok: true
+2019/11/16 12:54:44 okokokokok=============
+2019/11/16 12:54:44 okokokokok11111111111
+2019/11/16 12:54:44 Term: 9,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 server:0, time after finished.
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 9; server 0 become candidate
+2019/11/16 12:54:44 Term: 9, server 0 startElection function finished.
+2019/11/16 12:54:44 Term: 9, server 0 send request vote to server 1 args: &{9 0 0 0}
+2019/11/16 12:54:44 Term: 9, server 0 send request vote to server 2 args: &{9 0 0 0}
+2019/11/16 12:54:44 Term: 9, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:44 Term: 9, server 0 receive request vote from server 1 reply: &{9 false}
+2019/11/16 12:54:44 okokokokok: true
+2019/11/16 12:54:44 okokokokok=============
+2019/11/16 12:54:44 okokokokok11111111111
+2019/11/16 12:54:44 Term: 9,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 server:1, time after finished.
+2019/11/16 12:54:44 Term: 10; server 1 become candidate
+2019/11/16 12:54:44 Term: 10, server 1 startElection function finished.
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 10, server 1 send request vote to server 2 args: &{10 1 0 0}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 10, server 1 send request vote to server 0 args: &{10 1 0 0}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 9, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:44 Term: 10, server 1 receive request vote from server 0 reply: &{9 false}
+2019/11/16 12:54:44 okokokokok: true
+2019/11/16 12:54:44 okokokokok=============
+2019/11/16 12:54:44 okokokokok11111111111
+2019/11/16 12:54:44 Term: 10,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 server:0, time after finished.
+2019/11/16 12:54:44 Term: 10; server 0 become candidate
+2019/11/16 12:54:44 Term: 10, server 0 startElection function finished.
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 10, server 0 send request vote to server 2 args: &{10 0 0 0}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 10, server 0 send request vote to server 1 args: &{10 0 0 0}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 10, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:44 Term: 10, server 0 receive request vote from server 1 reply: &{10 false}
+2019/11/16 12:54:44 okokokokok: true
+2019/11/16 12:54:44 okokokokok=============
+2019/11/16 12:54:44 okokokokok11111111111
+2019/11/16 12:54:44 Term: 10,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 server:1, time after finished.
+2019/11/16 12:54:44 Term: 11; server 1 become candidate
+2019/11/16 12:54:44 Term: 11, server 1 startElection function finished.
+2019/11/16 12:54:44 Term: 11, server 1 send request vote to server 2 args: &{11 1 0 0}
+2019/11/16 12:54:44 Term: 11, server 1 send request vote to server 0 args: &{11 1 0 0}
+2019/11/16 12:54:44 Term: 10, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:44 Term: 11, server 1 receive request vote from server 0 reply: &{10 false}
+2019/11/16 12:54:44 okokokokok: true
+2019/11/16 12:54:44 okokokokok=============
+2019/11/16 12:54:44 okokokokok11111111111
+2019/11/16 12:54:44 Term: 11,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:44 server:0, time after finished.
+2019/11/16 12:54:44 Term: 11; server 0 become candidate
+2019/11/16 12:54:44 Term: 11, server 0 startElection function finished.
+2019/11/16 12:54:44 Term: 11, server 0 send request vote to server 2 args: &{11 0 0 0}
+2019/11/16 12:54:44 Term: 11, server 0 send request vote to server 1 args: &{11 0 0 0}
+2019/11/16 12:54:44 Term: 11, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:44 Term: 11, server 0 receive request vote from server 1 reply: &{11 false}
+2019/11/16 12:54:44 okokokokok: true
+2019/11/16 12:54:44 okokokokok=============
+2019/11/16 12:54:44 okokokokok11111111111
+2019/11/16 12:54:44 Term: 11,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:44 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:44 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 11, server 1 receive request vote from server 2 reply: &{6 false}
+2019/11/16 12:54:45 okokokokok: false
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 server:1, time after finished.
+2019/11/16 12:54:45 Term: 12; server 1 become candidate
+2019/11/16 12:54:45 Term: 12, server 1 startElection function finished.
+2019/11/16 12:54:45 Term: 12, server 1 send request vote to server 0 args: &{12 1 0 0}
+2019/11/16 12:54:45 Term: 12, server 1 send request vote to server 2 args: &{12 1 0 0}
+2019/11/16 12:54:45 Term: 11, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:45 Term: 12, server 1 receive request vote from server 0 reply: &{11 false}
+2019/11/16 12:54:45 okokokokok: true
+2019/11/16 12:54:45 okokokokok=============
+2019/11/16 12:54:45 okokokokok11111111111
+2019/11/16 12:54:45 Term: 12,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 11, server 0 receive request vote from server 2 reply: &{1 false}
+2019/11/16 12:54:45 okokokokok: false
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 server:0, time after finished.
+2019/11/16 12:54:45 Term: 12; server 0 become candidate
+2019/11/16 12:54:45 Term: 12, server 0 startElection function finished.
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 12, server 0 send request vote to server 1 args: &{12 0 0 0}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 12, server 0 send request vote to server 2 args: &{12 0 0 0}
+2019/11/16 12:54:45 Term: 12, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:45 Term: 12, server 0 receive request vote from server 1 reply: &{12 false}
+2019/11/16 12:54:45 okokokokok: true
+2019/11/16 12:54:45 okokokokok=============
+2019/11/16 12:54:45 okokokokok11111111111
+2019/11/16 12:54:45 Term: 12,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 server:1, time after finished.
+2019/11/16 12:54:45 Term: 13; server 1 become candidate
+2019/11/16 12:54:45 Term: 13, server 1 startElection function finished.
+2019/11/16 12:54:45 Term: 13, server 1 send request vote to server 2 args: &{13 1 0 0}
+2019/11/16 12:54:45 Term: 13, server 1 send request vote to server 0 args: &{13 1 0 0}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 12, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:45 Term: 13, server 1 receive request vote from server 0 reply: &{12 false}
+2019/11/16 12:54:45 okokokokok: true
+2019/11/16 12:54:45 okokokokok=============
+2019/11/16 12:54:45 okokokokok11111111111
+2019/11/16 12:54:45 Term: 13,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 12, server 0 receive request vote from server 2 reply: &{6 false}
+2019/11/16 12:54:45 okokokokok: false
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 13, server 1 receive request vote from server 2 reply: &{7 false}
+2019/11/16 12:54:45 okokokokok: false
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 server:0, time after finished.
+2019/11/16 12:54:45 Term: 13; server 0 become candidate
+2019/11/16 12:54:45 Term: 13, server 0 startElection function finished.
+2019/11/16 12:54:45 Term: 13, server 0 send request vote to server 2 args: &{13 0 0 0}
+2019/11/16 12:54:45 Term: 13, server 0 send request vote to server 1 args: &{13 0 0 0}
+2019/11/16 12:54:45 Term: 13, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:45 Term: 13, server 0 receive request vote from server 1 reply: &{13 false}
+2019/11/16 12:54:45 okokokokok: true
+2019/11/16 12:54:45 okokokokok=============
+2019/11/16 12:54:45 okokokokok11111111111
+2019/11/16 12:54:45 Term: 13,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 13, server 1 receive request vote from server 2 reply: &{12 false}
+2019/11/16 12:54:45 okokokokok: false
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 server:1, time after finished.
+2019/11/16 12:54:45 Term: 14; server 1 become candidate
+2019/11/16 12:54:45 Term: 14, server 1 startElection function finished.
+2019/11/16 12:54:45 Term: 14, server 1 send request vote to server 2 args: &{14 1 0 0}
+2019/11/16 12:54:45 Term: 14, server 1 send request vote to server 0 args: &{14 1 0 0}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 13, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:45 Term: 14, server 1 receive request vote from server 0 reply: &{13 false}
+2019/11/16 12:54:45 okokokokok: true
+2019/11/16 12:54:45 okokokokok=============
+2019/11/16 12:54:45 okokokokok11111111111
+2019/11/16 12:54:45 Term: 14,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:45 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:45 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:45 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 server:0, time after finished.
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 14; server 0 become candidate
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 14, server 0 send request vote to server 1 args: &{14 0 0 0}
+2019/11/16 12:54:46 Term: 14, server 0 startElection function finished.
+2019/11/16 12:54:46 Term: 14, server 0 send request vote to server 2 args: &{14 0 0 0}
+2019/11/16 12:54:46 Term: 14, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:46 Term: 14, server 0 receive request vote from server 1 reply: &{14 false}
+2019/11/16 12:54:46 okokokokok: true
+2019/11/16 12:54:46 okokokokok=============
+2019/11/16 12:54:46 okokokokok11111111111
+2019/11/16 12:54:46 Term: 14,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 14, server 0 receive request vote from server 2 reply: &{9 false}
+2019/11/16 12:54:46 okokokokok: false
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 server:1, time after finished.
+2019/11/16 12:54:46 Term: 15; server 1 become candidate
+2019/11/16 12:54:46 Term: 15, server 1 startElection function finished.
+2019/11/16 12:54:46 Term: 15, server 1 send request vote to server 0 args: &{15 1 0 0}
+2019/11/16 12:54:46 Term: 15, server 1 send request vote to server 2 args: &{15 1 0 0}
+2019/11/16 12:54:46 Term: 14, server 0 receive server 1 requestVote rpc.
+2019/11/16 12:54:46 Term: 15, server 1 receive request vote from server 0 reply: &{14 false}
+2019/11/16 12:54:46 okokokokok: true
+2019/11/16 12:54:46 okokokokok=============
+2019/11/16 12:54:46 okokokokok11111111111
+2019/11/16 12:54:46 Term: 15,------>>>>>>> server 1 total votes: 1
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 15, server 1 receive request vote from server 2 reply: &{10 false}
+2019/11/16 12:54:46 okokokokok: false
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 server:0, time after finished.
+2019/11/16 12:54:46 Term: 15; server 0 become candidate
+2019/11/16 12:54:46 Term: 15, server 0 startElection function finished.
+2019/11/16 12:54:46 Term: 15, server 0 send request vote to server 2 args: &{15 0 0 0}
+2019/11/16 12:54:46 Term: 15, server 0 send request vote to server 1 args: &{15 0 0 0}
+2019/11/16 12:54:46 Term: 15, server 1 receive server 0 requestVote rpc.
+2019/11/16 12:54:46 Term: 15, server 0 receive request vote from server 1 reply: &{15 false}
+2019/11/16 12:54:46 okokokokok: true
+2019/11/16 12:54:46 okokokokok=============
+2019/11/16 12:54:46 okokokokok11111111111
+2019/11/16 12:54:46 Term: 15,------>>>>>>> server 0 total votes: 1
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 1 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 15, server 1 receive request vote from server 2 reply: &{3 false}
+2019/11/16 12:54:46 okokokokok: false
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 receive AppendEntries from server 0 reply: &{0 false}
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 0
+2019/11/16 12:54:46 Term: 1, server 2 send heartbeat to server 1
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 0 args: &{1}
+2019/11/16 12:54:46 dduduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+2019/11/16 12:54:46 Term: 1, server 2 send AppendEntries to server 1 args: &{1}
+--- FAIL: TestReElection2A (5.53s)
+    config.go:332: expected one leader, got none
+FAIL
+exit status 1
+FAIL	github.com/mhearttzw/mit/src/raft	5.535s

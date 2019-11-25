@@ -66,6 +66,7 @@ func (wk *Worker) DoTask(arg *DoTaskArgs, _ *struct{}) error {
 		wk.parallelism.mu.Unlock()
 	}
 
+	//TODO what meaning?
 	if pause {
 		// give other workers a chance to prove that
 		// they are executing in parallel.
