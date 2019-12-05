@@ -43,7 +43,7 @@ type config struct {
 	rafts     []*Raft
 	applyErr  []string // from apply channel readers
 	connected []bool   // whether each server is on the net
-	saved     []*Persister
+	saved     []*Persister	// persist raft log and etc.
 	endnames  [][]string    // the port file names each sends to
 	logs      []map[int]int // copy of each server's committed entries
 	start     time.Time     // time at which make_config() was called
@@ -479,7 +479,7 @@ func (cfg *config) one(cmd int, expectedServers int, retry bool) int {
 				}
 				time.Sleep(20 * time.Millisecond)
 			}
-			cfg.t.Logf("nd: %v, cmd1: %v, index: %v, cmd: %v", nd, cmd1, index, cmd)
+			//cfg.t.Logf("nd: %v, cmd1: %v, index: %v, cmd: %v", nd, cmd1, index, cmd)
 			if retry == false {
 				cfg.t.Fatalf("one(%v) failed to reach agreement", cmd)
 			}

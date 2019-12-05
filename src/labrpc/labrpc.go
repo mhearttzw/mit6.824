@@ -93,6 +93,8 @@ func (e *ClientEnd) Call(svcMeth string, args interface{}, reply interface{}) bo
 	qe.Encode(args)
 	req.args = qb.Bytes()
 
+	// find server by servername, find servername by endname;
+	// req has parameter of endname;
 	select {
 	case e.ch <- req:
 		// ok
@@ -122,7 +124,7 @@ type Network struct {
 	enabled        map[interface{}]bool        // by end name
 	servers        map[interface{}]*Server     // servers, by name
 	connections    map[interface{}]interface{} // endname -> servername
-	endCh          chan reqMsg
+	endCh          chan reqMsg		// shared by all ClientEnds
 	done           chan struct{} // closed when Network is cleaned up
 	count          int32         // total RPC count, for statistics
 }
@@ -186,6 +188,7 @@ func (rn *Network) ReadEndnameInfo(endname interface{}) (enabled bool,
 	defer rn.mu.Unlock()
 
 	enabled = rn.enabled[endname]
+	// find server by servername, find servername by endname;
 	servername = rn.connections[endname]
 	if servername != nil {
 		server = rn.servers[servername]
@@ -206,6 +209,7 @@ func (rn *Network) IsServerDead(endname interface{}, servername interface{}, ser
 }
 
 func (rn *Network) ProcessReq(req reqMsg) {
+	// server handle the request RPC
 	enabled, servername, server, reliable, longreordering := rn.ReadEndnameInfo(req.endname)
 
 	if enabled && servername != nil && server != nil {
@@ -386,6 +390,7 @@ func (rs *Server) AddService(svc *Service) {
 	rs.services[svc.name] = svc
 }
 
+// here dispatch can equal to real rpc's Call method, server can be replaced by rpc address
 func (rs *Server) dispatch(req reqMsg) replyMsg {
 	rs.mu.Lock()
 
@@ -403,6 +408,7 @@ func (rs *Server) dispatch(req reqMsg) replyMsg {
 	rs.mu.Unlock()
 
 	if ok {
+		// here service.dispatch method use reflect method to simulate real rpc
 		return service.dispatch(methodName, req)
 	} else {
 		choices := []string{}
@@ -430,7 +436,7 @@ type Service struct {
 	methods map[string]reflect.Method
 }
 
-// rcvr means Raft instance
+// rcvr means Raft or KV server instance
 func MakeService(rcvr interface{}) *Service {
 	svc := &Service{}
 	svc.typ = reflect.TypeOf(rcvr)
@@ -462,6 +468,7 @@ func MakeService(rcvr interface{}) *Service {
 	return svc
 }
 
+// here service.dispatch method use reflect method to simulate real rpc
 func (svc *Service) dispatch(methname string, req reqMsg) replyMsg {
 	if method, ok := svc.methods[methname]; ok {
 		// prepare space into which to read the argument.
